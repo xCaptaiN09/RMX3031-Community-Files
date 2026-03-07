@@ -364,6 +364,8 @@
     <button class="tab active" onclick="switchTab('roms')">ROMs <span class="count" id="count-roms">0</span></button>
     <button class="tab" onclick="switchTab('kernels')">Kernels <span class="count" id="count-kernels">0</span></button>
     <button class="tab" onclick="switchTab('ota')">OTA <span class="count" id="count-ota">0</span></button>
+    <button class="tab" onclick="switchTab('firmware')">Firmware <span class="count" id="count-firmware">0</span></button>
+    <button class="tab" onclick="switchTab('recovery')">Recovery <span class="count" id="count-recovery">0</span></button>
     <button class="tab" onclick="switchTab('other')">Other <span class="count" id="count-other">0</span></button>
   </div>
 
@@ -372,6 +374,8 @@
   <div id="tab-roms" class="tab-content active"></div>
   <div id="tab-kernels" class="tab-content"></div>
   <div id="tab-ota" class="tab-content"></div>
+  <div id="tab-firmware" class="tab-content"></div>
+  <div id="tab-recovery" class="tab-content"></div>
   <div id="tab-other" class="tab-content"></div>
 
   <footer>
@@ -398,7 +402,7 @@
   }
 
   function renderAll() {
-    ['roms', 'kernels', 'ota', 'other'].forEach(cat => {
+    ['roms', 'kernels', 'ota', 'firmware', 'recovery', 'other'].forEach(cat => {
       const items = data[cat] || [];
       document.getElementById(`count-${cat}`).textContent = items.length;
       const el = document.getElementById(`tab-${cat}`);
