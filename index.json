@@ -9,7 +9,7 @@
       "android": "14",
       "date": "2026-03-07",
       "size": "500MB",
-      "url": "https://archive.org/download/lineage-23-2-charging-fix-rmx3031/file.zip",
+      "url": "https://archive.org/download/lineage-23.2-charging-fix-rmx3031/file.zip",
       "changelog": "Fixed charging on idle. Based on Android 14 QPR2."
     }
   ],
