@@ -10,7 +10,7 @@
     "date": "2026-03-08",
     "size": "22MB",
     "url": "https://archive.org/download/rmx3031-sukisu-ultra/SukiSU_Ultra_RMX3031.zip",
-    "changelog": "SukiSU Ultra kernel for RMX3031"
+    "changelog": "Working: Root via SukiSU Ultra, SuSFS v2.0.0, Zygisk Next, Tricky Store / Play Integrity, Droidspaces / Linux container, KPM modules. Not working: ReZygisk (version check blocks non-submodule KSU), LSPosed (incompatible with Android 16 QPR2 ART)."
   },
   {
     "name": "Kernel RMX3031 Charging Fix (No Root)",
