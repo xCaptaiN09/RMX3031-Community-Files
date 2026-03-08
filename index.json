@@ -4,13 +4,53 @@
   "maintainer": "xCaptaiN09",
   "roms": [],
   "kernels": [
-    {
+  {
+    "name": "SukiSU Ultra RMX3031",
+    "version": "4.1.1",
+    "date": "2026-03-08",
+    "size": "22MB",
+    "url": "https://archive.org/download/rmx3031-sukisu-ultra/SukiSU_Ultra_RMX3031.zip",
+    "changelog": "SukiSU Ultra kernel for RMX3031"
+  },
+  {
     "name": "Kernel RMX3031 Charging Fix",
     "version": "1.0",
     "date": "2026-03-08",
-    "size": "",
+    "size": "21MB",
     "url": "https://archive.org/download/rmx3031-kernel-chargingfix/Kernel_RMX3031_ChargingFix.zip",
     "changelog": "Charging fix kernel for RMX3031"
+  },
+  {
+    "name": "COS 16 Kernel (No Root)",
+    "version": "1.0",
+    "date": "2026-03-08",
+    "size": "20MB",
+    "url": "https://archive.org/download/rmx3031-kernels/COS_16_kernel_no_root.zip",
+    "changelog": "COS 16 kernel without root for RMX3031"
+  },
+  {
+    "name": "Stock KSU Kernel",
+    "version": "1.0",
+    "date": "2026-03-08",
+    "size": "23MB",
+    "url": "https://archive.org/download/rmx3031-kernels/STOCK_KSU.zip",
+    "changelog": "Stock kernel with KernelSU for RMX3031"
+  },
+  {
+    "name": "SukiSU Ultra 3.2.0",
+    "version": "3.2.0",
+    "date": "2026-03-08",
+    "size": "26MB",
+    "url": "https://archive.org/download/rmx3031-kernels/SukiSU-Ultra_3.2.0.zip",
+    "changelog": "SukiSU Ultra 3.2.0 kernel for RMX3031"
+  },
+  {
+    "name": "Kernel v4.19.325 KSUN SuSFS v1.5.5",
+    "version": "1.0.8",
+    "date": "2026-03-08",
+    "size": "35MB",
+    "url": "https://archive.org/download/rmx3031-kernels/v4.19.325-ksun-v12602-susfs-v1.5.5.zip",
+    "changelog": "Linux 4.19.325 with KernelSU Next and SuSFS v1.5.5 and Nethunter"
   }
   ],
   "ota": [],
