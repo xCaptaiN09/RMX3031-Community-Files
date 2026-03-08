@@ -2,20 +2,27 @@
   "device": "Realme X7 Max",
   "codename": "RMX3031",
   "maintainer": "xCaptaiN09",
-  "roms": [
-    {
-      "name": "LineageOS 23.2 Charging Fix",
-      "version": "23.2",
-      "android": "14",
-      "date": "2026-03-07",
-      "size": "22MB",
-      "url": "https://archive.org/download/lineage-23.2-charging-fix-rmx-3031/Lineage_23.2_ChargingFix_RMX3031.zip",
-      "changelog": "Fixed charging on idle. Based on Android 14 QPR2."
-    }
-  ],
+  "roms": [],
   "kernels": [],
   "ota": [],
-  "firmware": [],
+  "firmware": [
+    {
+    "name": "RUI4 F.12 Firmware Only",
+    "version": "F.12",
+    "date": "2026-03-08",
+    "size": "57MB",
+    "url": "https://archive.org/download/rmx3031-firmware/RMX3031_RUI4_F.12_FW_ONLY.zip",
+    "changelog": "RUI4 F.12 firmware only package for RMX3031"
+  },
+  {
+    "name": "RUI4 F.13 Firmware Only",
+    "version": "F.13",
+    "date": "2026-03-08",
+    "size": "57MB",
+    "url": "https://archive.org/download/rmx3031-firmware/RMX3031_RUI4_F.13_FW_ONLY.zip",
+    "changelog": "RUI4 F.13 firmware only package for RMX3031"
+  }
+  ],
   "recovery": [],
   "other": []
 }
