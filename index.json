@@ -13,7 +13,7 @@
     "changelog": "SukiSU Ultra kernel for RMX3031"
   },
   {
-    "name": "Kernel RMX3031 Charging Fix",
+    "name": "Kernel RMX3031 Charging Fix (No Root)",
     "version": "1.0",
     "date": "2026-03-08",
     "size": "21MB",
@@ -30,7 +30,7 @@
   },
   {
     "name": "Stock KSU Kernel",
-    "version": "1.0",
+    "version": "3.1.0",
     "date": "2026-03-08",
     "size": "23MB",
     "url": "https://archive.org/download/rmx3031-kernels/STOCK_KSU.zip",
