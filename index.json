@@ -3,7 +3,16 @@
   "codename": "RMX3031",
   "maintainer": "xCaptaiN09",
   "roms": [],
-  "kernels": [],
+  "kernels": [
+    {
+    "name": "Kernel RMX3031 Charging Fix",
+    "version": "1.0",
+    "date": "2026-03-08",
+    "size": "",
+    "url": "https://archive.org/download/rmx3031-kernel-chargingfix/Kernel_RMX3031_ChargingFix.zip",
+    "changelog": "Charging fix kernel for RMX3031"
+  }
+  ],
   "ota": [],
   "firmware": [
     {
