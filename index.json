@@ -72,7 +72,16 @@
     "changelog": "RUI4 F.13 firmware only package for RMX3031"
   }
   ],
-  "recovery": [],
+  "recovery": [
+  {
+    "name": "RMX3031-twrp-RUI2",
+    "version": "1.0",
+    "date": "2026-03-09",
+    "size": "38MB",
+    "url": "https://archive.org/download/rmx3031-twrp-rui2/TWRP_RUI2_A11.zip",
+    "changelog": "RMX3031-twrp-RUI2"
+  }
+  ],
   "other": [
   {
     "name": "Permissiver V5",
