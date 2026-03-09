@@ -73,5 +73,14 @@
   }
   ],
   "recovery": [],
-  "other": []
+  "other": [
+  {
+    "name": "Permissiver V5",
+    "version": "5",
+    "date": "2026-03-08",
+    "size": "",
+    "url": "https://archive.org/download/permissiver-v-5/Permissiver_v5.zip",
+    "changelog": "Permissiver V5 for RMX3031. Flashable via Magisk or TWRP."
+  }
+  ]
 }
