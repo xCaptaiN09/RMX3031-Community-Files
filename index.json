@@ -74,6 +74,22 @@
   ],
   "recovery": [
   {
+    "name": "RMX3031-twrp-RUI4",
+    "version": "1.0",
+    "date": "2026-03-09",
+    "size": "46MB",
+    "url": "https://archive.org/download/rmx3031-twrp-rui4/TWRP-3.7.0-12.1-RUI4-RMX3031-20220417.zip",
+    "changelog": "RMX3031-twrp-RUI4"
+  },
+  {
+    "name": "RMX3031-twrp-RUI3",
+    "version": "1.0",
+    "date": "2026-03-09",
+    "size": "45MB",
+    "url": "https://archive.org/download/rmx3031-twrp-rui3/TWRP-3.7.0-12-RMX3031-20221024.zip",
+    "changelog": "RMX3031-twrp-RUI3"
+  },
+  {
     "name": "RMX3031-twrp-RUI2",
     "version": "1.0",
     "date": "2026-03-09",
