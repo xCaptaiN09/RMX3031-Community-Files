@@ -2,7 +2,17 @@
   "device": "Realme X7 Max",
   "codename": "RMX3031",
   "maintainer": "xCaptaiN09",
-  "roms": [],
+  "roms": [
+  {
+    "name": "Axion AOSP V2.2.1",
+    "version": "2.2.1",
+    "android": "16",
+    "date": "2025-12-09",
+    "size": "2.4GB",
+    "url": "https://archive.org/download/rmx3031-axion-aosp-v2-2-1/axion-2.2.1-NIGHTLY-20251209-UNOFFICIAL-GMS-MT6893.zip",
+    "changelog": "Axion AOSP V2.2.1 Nightly. Unofficial GMS build for Cupida (RMX3031) and Denniz. Android 16. Screen off UDFPS now works."
+  }
+  ],
   "kernels": [
   {
     "name": "SukiSU Ultra RMX3031",
