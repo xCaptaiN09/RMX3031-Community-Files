@@ -74,7 +74,7 @@
   ],
   "recovery": [
   {
-    "name": "RMX3031-twrp-RUI4",
+    "name": "RMX3031 TWRP RUI4",
     "version": "1.0",
     "date": "2026-03-09",
     "size": "46MB",
@@ -82,7 +82,7 @@
     "changelog": "RMX3031-twrp-RUI4"
   },
   {
-    "name": "RMX3031-twrp-RUI3",
+    "name": "RMX3031 TWRP RUI3",
     "version": "1.0",
     "date": "2026-03-09",
     "size": "45MB",
@@ -90,7 +90,7 @@
     "changelog": "RMX3031-twrp-RUI3"
   },
   {
-    "name": "RMX3031-twrp-RUI2",
+    "name": "RMX3031 TWRP RUI2",
     "version": "1.0",
     "date": "2026-03-09",
     "size": "38MB",
@@ -106,6 +106,30 @@
     "size": "",
     "url": "https://archive.org/download/permissiver-v-5/Permissiver_v5.zip",
     "changelog": "Permissiver V5 for RMX3031. Flashable via Magisk or TWRP."
+  },
+    {
+    "name": "ADB/Fastboot Commands",
+    "version": "1.0",
+    "date": "2026-03-09",
+    "size": "20KB",
+    "url": "https://archive.org/download/rmx3031-docs/ADB_Fastboot_Commands.pdf",
+    "changelog": "commands for ADB & Fastboot"
+  },
+  {
+    "name": "LOG Capture Commands",
+    "version": "1.0",
+    "date": "2026-03-09",
+    "size": "10KB",
+    "url": "https://archive.org/download/rmx3031-docs/LOG%20commands.pdf",
+    "changelog": "Commands to Capture LOGs"
+  },
+  {
+    "name": "Git Commands",
+    "version": "1.0",
+    "date": "2026-03-09",
+    "size": "3MB",
+    "url": "https://archive.org/download/rmx3031-docs/git.pdf",
+    "changelog": "Git Commands"
   }
   ]
 }
