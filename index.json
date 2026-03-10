@@ -4,6 +4,15 @@
   "maintainer": "xCaptaiN09",
   "roms": [
   {
+    "name": "EvolutionX v11.6.1",
+    "version": "11.6.1",
+    "android": "16",
+    "date": "2025-12-10",
+    "size": "3.6GB",
+    "url": "https://archive.org/download/rmx3031-evolutionx-16-11-6-1/EvolutionX-16.0-20260302-op6893-11.6.1-Unofficial.zip",
+    "changelog": "Rebranded to op6893. Improved udfps behaviour. Temporarily rolled back some. previous changes(bt, wifi). Synced with latest rom changes. February security patches"
+  },
+  {
     "name": "Axion AOSP V2.2.1",
     "version": "2.2.1",
     "android": "16",
