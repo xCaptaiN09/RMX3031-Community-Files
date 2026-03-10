@@ -51,7 +51,6 @@
     z-index: 0;
     transform: translate(-50%, -50%);
     background: radial-gradient(circle, #ff6b3518 0%, #ff6b350a 30%, transparent 70%);
-    transition: opacity 0.3s ease;
     opacity: 0;
   }
 
@@ -499,29 +498,55 @@
     document.getElementById(`tab-${name}`).classList.add('active');
   }
 
-  // Cursor grid illumination
+  // Cursor grid illumination with spring lag
   const cursorGrid = document.getElementById('cursorGrid');
   const cursorGridBright = document.getElementById('cursorGridBright');
   const cursorGlow = document.getElementById('cursorGlow');
 
+  let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+  let glowX = mouseX, glowY = mouseY;
+  let gridX = mouseX, gridY = mouseY;
+  let isVisible = false;
+
   document.addEventListener('mousemove', (e) => {
-    const x = e.clientX;
-    const y = e.clientY;
-    cursorGrid.style.setProperty('--mouse-x', x + 'px');
-    cursorGrid.style.setProperty('--mouse-y', y + 'px');
-    cursorGridBright.style.setProperty('--mouse-x', x + 'px');
-    cursorGridBright.style.setProperty('--mouse-y', y + 'px');
-    cursorGlow.style.left = x + 'px';
-    cursorGlow.style.top = y + 'px';
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    if (!isVisible) {
+      glowX = mouseX; glowY = mouseY;
+      gridX = mouseX; gridY = mouseY;
+      isVisible = true;
+    }
     cursorGlow.style.opacity = '1';
     cursorGridBright.style.opacity = '1';
   });
 
   document.addEventListener('mouseleave', () => {
+    isVisible = false;
     cursorGlow.style.opacity = '0';
     cursorGridBright.style.opacity = '0';
   });
 
+  function animate() {
+    // Glow follows with tight spring
+    glowX += (mouseX - glowX) * 0.08;
+    glowY += (mouseY - glowY) * 0.08;
+
+    // Grid highlight follows with looser spring (more lag)
+    gridX += (mouseX - gridX) * 0.04;
+    gridY += (mouseY - gridY) * 0.04;
+
+    cursorGlow.style.left = glowX + 'px';
+    cursorGlow.style.top = glowY + 'px';
+
+    cursorGrid.style.setProperty('--mouse-x', gridX + 'px');
+    cursorGrid.style.setProperty('--mouse-y', gridY + 'px');
+    cursorGridBright.style.setProperty('--mouse-x', glowX + 'px');
+    cursorGridBright.style.setProperty('--mouse-y', glowY + 'px');
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
   loadData();
 </script>
 </body>
