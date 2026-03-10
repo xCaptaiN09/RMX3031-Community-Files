@@ -184,16 +184,56 @@
   }
 
   /* Tabs */
+  .tabs-wrapper {
+    position: relative;
+    margin: 40px 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .tab-arrow {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: all 0.2s;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .tab-arrow.visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .tab-arrow:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
   .tabs {
     display: flex;
     gap: 4px;
-    margin: 40px 0 24px;
+    flex: 1;
     background: var(--surface);
     padding: 4px;
     border-radius: 10px;
     border: 1px solid var(--border);
     overflow-x: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
   }
+
+  .tabs::-webkit-scrollbar { display: none; }
 
   .tab {
     flex: 1;
@@ -404,14 +444,18 @@
     </div>
   </header>
 
-  <div class="tabs">
-    <button class="tab active" onclick="switchTab('roms')">ROMs <span class="count" id="count-roms">0</span></button>
-    <button class="tab" onclick="switchTab('kernels')">Kernels <span class="count" id="count-kernels">0</span></button>
-    <button class="tab" onclick="switchTab('ota')">OTA <span class="count" id="count-ota">0</span></button>
-    <button class="tab" onclick="switchTab('firmware')">Firmware <span class="count" id="count-firmware">0</span></button>
-    <button class="tab" onclick="switchTab('sptool')">SP tool FW <span class="count" id="count-sptool">0</span></button>
-    <button class="tab" onclick="switchTab('recovery')">Recovery <span class="count" id="count-recovery">0</span></button>
-    <button class="tab" onclick="switchTab('other')">Other <span class="count" id="count-other">0</span></button>
+  <div class="tabs-wrapper">
+    <button class="tab-arrow" id="tabLeft" onclick="scrollTabs(-1)">&#8592;</button>
+    <div class="tabs" id="tabsContainer">
+      <button class="tab active" onclick="switchTab('roms')">ROMs <span class="count" id="count-roms">0</span></button>
+      <button class="tab" onclick="switchTab('kernels')">Kernels <span class="count" id="count-kernels">0</span></button>
+      <button class="tab" onclick="switchTab('ota')">OTA <span class="count" id="count-ota">0</span></button>
+      <button class="tab" onclick="switchTab('firmware')">Firmware <span class="count" id="count-firmware">0</span></button>
+      <button class="tab" onclick="switchTab('sptool')">SP Tool FW <span class="count" id="count-sptool">0</span></button>
+      <button class="tab" onclick="switchTab('recovery')">Recovery <span class="count" id="count-recovery">0</span></button>
+      <button class="tab" onclick="switchTab('other')">Other <span class="count" id="count-other">0</span></button>
+    </div>
+    <button class="tab-arrow" id="tabRight" onclick="scrollTabs(1)">&#8594;</button>
   </div>
 
   <div id="loading" class="loading">Loading files...</div>
@@ -497,6 +541,26 @@
     event.target.closest('.tab').classList.add('active');
     document.getElementById(`tab-${name}`).classList.add('active');
   }
+
+  // Tab arrow scroll
+  const tabsContainer = document.getElementById('tabsContainer');
+  const tabLeft = document.getElementById('tabLeft');
+  const tabRight = document.getElementById('tabRight');
+
+  function updateArrows() {
+    const overflowing = tabsContainer.scrollWidth > tabsContainer.clientWidth;
+    tabLeft.classList.toggle('visible', overflowing && tabsContainer.scrollLeft > 0);
+    tabRight.classList.toggle('visible', overflowing && tabsContainer.scrollLeft < tabsContainer.scrollWidth - tabsContainer.clientWidth - 1);
+  }
+
+  function scrollTabs(dir) {
+    tabsContainer.scrollLeft += dir * 150;
+    setTimeout(updateArrows, 300);
+  }
+
+  tabsContainer.addEventListener('scroll', updateArrows);
+  window.addEventListener('resize', updateArrows);
+  setTimeout(updateArrows, 100);
 
   // Cursor grid illumination with spring lag
   const cursorGrid = document.getElementById('cursorGrid');
