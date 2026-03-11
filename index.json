@@ -51,7 +51,7 @@
   },
   {
     "name": "Kernel RMX3031 Charging Fix (No Root)",
-    "version": "1.0",
+    "version": "",
     "date": "2026-03-08",
     "size": "21MB",
     "url": "https://archive.org/download/rmx3031-kernel-chargingfix/Kernel_RMX3031_ChargingFix.zip",
@@ -59,7 +59,7 @@
   },
   {
     "name": "COS 16 Kernel (No Root)",
-    "version": "1.0",
+    "version": "",
     "date": "2026-03-08",
     "size": "20MB",
     "url": "https://archive.org/download/rmx3031-kernels/COS_16_kernel_no_root.zip",
@@ -243,7 +243,7 @@
   "recovery": [
   {
     "name": "RMX3031 TWRP RUI4",
-    "version": "1.0",
+    "version": "",
     "date": "2026-03-09",
     "size": "46MB",
     "url": "https://archive.org/download/rmx3031-twrp-rui4/TWRP-3.7.0-12.1-RUI4-RMX3031-20220417.zip",
@@ -251,7 +251,7 @@
   },
   {
     "name": "RMX3031 TWRP RUI3",
-    "version": "1.0",
+    "version": "",
     "date": "2026-03-09",
     "size": "45MB",
     "url": "https://archive.org/download/rmx3031-twrp-rui3/TWRP-3.7.0-12-RMX3031-20221024.zip",
@@ -259,7 +259,7 @@
   },
   {
     "name": "RMX3031 TWRP RUI2",
-    "version": "1.0",
+    "version": "",
     "date": "2026-03-09",
     "size": "38MB",
     "url": "https://archive.org/download/rmx3031-twrp-rui2/TWRP_RUI2_A11.zip",
@@ -277,7 +277,7 @@
   },
     {
     "name": "ADB/Fastboot Commands",
-    "version": "1.0",
+    "version": "",
     "date": "2026-03-09",
     "size": "20KB",
     "url": "https://archive.org/download/rmx3031-docs/ADB_Fastboot_Commands.pdf",
@@ -285,7 +285,7 @@
   },
   {
     "name": "LOG Capture Commands",
-    "version": "1.0",
+    "version": "",
     "date": "2026-03-09",
     "size": "10KB",
     "url": "https://archive.org/download/rmx3031-docs/LOG%20commands.pdf",
@@ -293,7 +293,7 @@
   },
   {
     "name": "Git Commands",
-    "version": "1.0",
+    "version": "",
     "date": "2026-03-09",
     "size": "3MB",
     "url": "https://archive.org/download/rmx3031-docs/git.pdf",
