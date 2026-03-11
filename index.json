@@ -96,6 +96,14 @@
     "size": "5.73GB",
     "url": "https://archive.org/download/rmx3031-ota-c12/X7-MAX-C12-Toolbox.zip",
     "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. Sequential upgrade path: A22 > C12 > F13 > F24 (no data wipe needed). Cross-version upgrades/downgrades require data format."
+  },
+  {
+    "name": "X7-MAX C17 Toolbox",
+    "version": "C17",
+    "date": "2026-03-11",
+    "size": "5.83GB",
+    "url": "https://archive.org/download/rmx3031-ota-c17/X7-MAX-C17-Toolbox.zip",
+    "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. Sequential upgrade path: A22 > C12 > F13 > F24 (no data wipe needed). Cross-version upgrades/downgrades require data format."
   }
   ],
   "firmware": [
