@@ -152,7 +152,15 @@
     "size": "3.60GB",
     "url": "https://archive.org/download/rmx3031-rollback-a21/X7MAX_11_A.21.zip",
     "changelog": "Rollback package. Enable Developer Mode → Settings > About Phone > Software Update > Local Installation → select and install."
-  }
+  },
+  {
+    "name": "X7-MAX C16 (Rollback)",
+    "version": "C16",
+    "date": "2026-03-11",
+    "size": "5.02GB",
+    "url": "https://archive.org/download/rmx3031-rollback-c16/X7MAX_11_C.16.zip",
+    "changelog": "Rollback package. Enable Developer Mode → Settings > About Phone > Software Update > Local Installation → select and install."
+  }  
   ],
   "firmware": [
     {
