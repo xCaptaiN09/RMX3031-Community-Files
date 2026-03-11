@@ -13,6 +13,15 @@
     "changelog": "Rebranded to op6893. Improved udfps behaviour. Temporarily rolled back some. previous changes(bt, wifi). Synced with latest rom changes. February security patches"
   },
   {
+    "name": "LineageOS 23.2 Unofficial",
+    "version": "23.2",
+    "date": "2026-03-01",
+    "size": "1.1GB",
+    "android": "16",
+    "url": "https://archive.org/download/rmx3031-lineageos-23-2/lineage-23.2-20260301-UNOFFICIAL-op6893.zip",
+    "changelog": "Rebranded to op6893. Switched back to mtk vibrator hal. Fixed video call issues across all major apps. Fixed open and close animations. Misc improvements. By ManshuTyagi."
+  },
+  {
     "name": "Axion AOSP V2.2.1",
     "version": "2.2.1",
     "android": "16",
