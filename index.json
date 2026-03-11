@@ -144,6 +144,14 @@
     "size": "6.58GB",
     "url": "https://archive.org/download/rmx3031-ota-f25/X7-MAX-F25-Toolbox.zip",
     "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. Sequential upgrade path: A22 > C12 > F13 > F24 (no data wipe needed). Cross-version upgrades/downgrades require data format."
+  },
+  {
+    "name": "X7-MAX A21 (Rollback)",
+    "version": "A21",
+    "date": "2026-03-11",
+    "size": "3.60GB",
+    "url": "https://archive.org/download/rmx3031-rollback-a21/X7MAX_11_A.21.zip",
+    "changelog": "Rollback package. Enable Developer Mode → Settings > About Phone > Software Update > Local Installation → select and install."
   }
   ],
   "firmware": [
