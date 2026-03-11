@@ -29,6 +29,15 @@
     "size": "2.4GB",
     "url": "https://archive.org/download/rmx3031-axion-aosp-v2-2-1/axion-2.2.1-NIGHTLY-20251209-UNOFFICIAL-GMS-MT6893.zip",
     "changelog": "Axion AOSP V2.2.1 Nightly. Unofficial GMS build for Cupida (RMX3031) and Denniz. Android 16. Screen off UDFPS now works."
+  },
+  {
+    "name": "RisingOS Revived 8.1.1",
+    "version": "8.1.1",
+    "android": "16",
+    "date": "2026-03-12",
+    "size": "3.6GB",
+    "url": "https://archive.org/download/rmx3031-risingos-8-1-1/RisingOS_Revived-8.1.1-251005-1609-GAPPS-COMMUNITY-MT6893-ota.zip",
+    "changelog": "RisingOS Revived 8.1.1 unofficial build for RMX3031. Android 16."
   }
   ],
   "kernels": [
