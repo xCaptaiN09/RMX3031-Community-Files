@@ -72,7 +72,16 @@
     "changelog": "Linux 4.19.325 with KernelSU Next and SuSFS v1.5.5 and Nethunter"
   }
   ],
-  "ota": [],
+  "ota": [
+  {
+    "name": "X7-MAX A15 Toolbox",
+    "version": "A15",
+    "date": "2026-03-11",
+    "size": "4.66GB",
+    "url": "https://archive.org/download/rmx3031-ota-a15/X7-MAX-A15-Toolbox.zip",
+    "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. Sequential upgrade path: A22 > C12 > F13 > F24 (no data wipe needed). Cross-version upgrades/downgrades require data format."
+  }
+  ],
   "firmware": [
     {
     "name": "RUI4 F.12 Firmware Only",
