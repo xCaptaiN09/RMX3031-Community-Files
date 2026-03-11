@@ -189,7 +189,48 @@
     "changelog": "RUI4 F.13 firmware only package for RMX3031"
   }
   ],
-  "sptool": [],
+  "sptool": [
+  {
+    "name": "A.15",
+    "version": "A.15",
+    "date": "2026-03-12",
+    "size": "3.2GB",
+    "url": "https://archive.org/download/rmx3031-sptool-firmware/A.15.7z",
+    "changelog": "SP Flash Tool firmware package for RMX3031."
+  },
+  {
+    "name": "A.22",
+    "version": "A.22",
+    "date": "2026-03-12",
+    "size": "3.0GB",
+    "url": "https://archive.org/download/rmx3031-sptool-firmware/A.22.7z",
+    "changelog": "SP Flash Tool firmware package for RMX3031."
+  },
+  {
+    "name": "C.12saxx",
+    "version": "C.12saxx",
+    "date": "2026-03-12",
+    "size": "4.3GB",
+    "url": "https://archive.org/download/rmx3031-sptool-firmware/C.12saxx.7z",
+    "changelog": "SP Flash Tool firmware package for RMX3031."
+  },
+  {
+    "name": "C.15",
+    "version": "C.15",
+    "date": "2026-03-12",
+    "size": "4.4GB",
+    "url": "https://archive.org/download/rmx3031-sptool-firmware/C.15.7z",
+    "changelog": "SP Flash Tool firmware package for RMX3031."
+  },
+  {
+    "name": "Tools",
+    "version": "",
+    "date": "2026-03-12",
+    "size": "51MB",
+    "url": "https://archive.org/download/rmx3031-sptool-firmware/Tools.7z",
+    "changelog": "SP Flash Tool and required tools for RMX3031 firmware flashing."
+  }
+  ],
   "recovery": [
   {
     "name": "RMX3031 TWRP RUI4",
