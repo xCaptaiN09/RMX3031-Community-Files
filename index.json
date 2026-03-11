@@ -86,7 +86,7 @@
     "version": "A22",
     "date": "2026-03-11",
     "size": "4.47GB",
-    "url": "",
+    "url": "https://archive.org/download/rmx3031-ota-a22/X7-MAX-A22-Toolbox.zip",
     "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. Sequential upgrade path: A22 > C12 > F13 > F24 (no data wipe needed). Cross-version upgrades/downgrades require data format."
   }
   ],
