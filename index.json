@@ -90,6 +90,16 @@
     "changelog": "Linux 4.19.325 with KernelSU Next and SuSFS v1.5.5 and Nethunter"
   }
   ],
+  "modules": [
+  {
+    "name": "Permissiver V5",
+    "version": "5",
+    "date": "2026-03-08",
+    "size": "1.2MB",
+    "url": "https://archive.org/download/permissiver-v-5/Permissiver_v5.zip",
+    "changelog": "Permissiver V5 for RMX3031. Flashable via Magisk or TWRP."
+  }
+  ],
   "ota": [
   {
     "name": "X7-MAX A15 Toolbox",
@@ -268,14 +278,6 @@
   ],
   "other": [
   {
-    "name": "Permissiver V5",
-    "version": "5",
-    "date": "2026-03-08",
-    "size": "1.2MB",
-    "url": "https://archive.org/download/permissiver-v-5/Permissiver_v5.zip",
-    "changelog": "Permissiver V5 for RMX3031. Flashable via Magisk or TWRP."
-  },
-    {
     "name": "ADB/Fastboot Commands",
     "version": "",
     "date": "2026-03-09",
