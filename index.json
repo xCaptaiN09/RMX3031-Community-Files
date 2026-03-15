@@ -42,6 +42,14 @@
   ],
   "kernels": [
   {
+    "name": "KSU Next RMX3031",
+    "version": "3.1.0",
+    "date": "2026-03-15",
+    "size": "21MB",
+    "url": "https://archive.org/download/rmx3031-kernels/KSU_Next_RMX3031.zip",
+    "changelog": "KernelSU Next. Use Zygisk Next / NeoZygisk. LSPosed working. SuSFS v1.5.5. SELinux: Enforcing. Flash SUSFS-FOR-KERNELSU module (required for better stealth/root hiding). Note: ReZygisk not working."
+  },
+  {
     "name": "SukiSU Ultra RMX3031",
     "version": "4.1.1",
     "date": "2026-03-08",
