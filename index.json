@@ -206,6 +206,8 @@
     "changelog": "Rollback package. Enable Developer Mode → Settings > About Phone > Software Update > Local Installation → select and install."
   }  
   ],
+  "ota_in": [],
+  "ota_cn": [],
   "firmware": [
     {
     "name": "RUI4 F.12 Firmware Only",
