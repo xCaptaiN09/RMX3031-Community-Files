@@ -449,9 +449,9 @@
       <button class="tab active" onclick="switchTab('roms')">ROMs <span class="count" id="count-roms">0</span></button>
       <button class="tab" onclick="switchTab('kernels')">Kernels <span class="count" id="count-kernels">0</span></button>
       <button class="tab" onclick="switchTab('modules')">Modules <span class="count" id="count-modules">0</span></button>
-      <button class="tab" onclick="switchTab('ota')">OTA · X7MAX <span class="count" id="count-ota">0</span></button>
-      <button class="tab" onclick="switchTab('ota_in')">OTA · RMX3031 <span class="count" id="count-ota_in">0</span></button>
-      <button class="tab" onclick="switchTab('ota_cn')">OTA · RMX3350 <span class="count" id="count-ota_cn">0</span></button>
+      <button class="tab" onclick="switchTab('ota')">X7 MAX <span class="count" id="count-ota">0</span></button>
+      <button class="tab" onclick="switchTab('ota_cn')">GT Neo <span class="count" id="count-ota_cn">0</span></button>
+      <button class="tab" onclick="switchTab('ota_cnf')">GT Neo Flash <span class="count" id="count-ota_cnf">0</span></button>
       <button class="tab" onclick="switchTab('firmware')">Firmware <span class="count" id="count-firmware">0</span></button>
       <button class="tab" onclick="switchTab('sptool')">SP Tool FW <span class="count" id="count-sptool">0</span></button>
       <button class="tab" onclick="switchTab('recovery')">Recovery <span class="count" id="count-recovery">0</span></button>
@@ -466,8 +466,8 @@
   <div id="tab-kernels" class="tab-content"></div>
   <div id="tab-modules" class="tab-content"></div>
   <div id="tab-ota" class="tab-content"></div>
-  <div id="tab-ota_in" class="tab-content"></div>
   <div id="tab-ota_cn" class="tab-content"></div>
+  <div id="tab-ota_cnf" class="tab-content"></div>
   <div id="tab-firmware" class="tab-content"></div>
   <div id="tab-sptool" class="tab-content"></div>
   <div id="tab-recovery" class="tab-content"></div>
@@ -497,7 +497,7 @@
   }
 
   function renderAll() {
-    ['roms', 'kernels', 'modules', 'ota', 'ota_in', 'ota_cn', 'firmware', 'sptool', 'recovery', 'other'].forEach(cat => {
+    ['roms', 'kernels', 'modules', 'ota', 'ota_cn', 'ota_cnf', 'firmware', 'sptool', 'recovery', 'other'].forEach(cat => {
       const items = data[cat] || [];
       document.getElementById(`count-${cat}`).textContent = items.length;
       const el = document.getElementById(`tab-${cat}`);
@@ -620,4 +620,3 @@
 </script>
 </body>
 </html>
-
