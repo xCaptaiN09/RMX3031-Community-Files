@@ -63,7 +63,7 @@
     "date": "2026-03-08",
     "size": "21MB",
     "url": "https://archive.org/download/rmx3031-kernel-lineage-chargingfix/Lineage_23.2_ChargingFix_RMX3031.zip",
-    "changelog": "Charging fix kernel for RMX3031"
+    "changelog": "Charging fix kernel for RMX3031. Added UDFPS support"
   },
   {
     "name": "COS 16 Kernel (No Root)",
