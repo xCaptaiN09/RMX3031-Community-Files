@@ -50,20 +50,20 @@
     "changelog": "KernelSU Next. Use Zygisk Next / NeoZygisk. LSPosed working. SuSFS v1.5.5. SELinux: Enforcing. Flash SUSFS-FOR-KERNELSU module (required for better stealth/root hiding). Added UDFPS support. Note: ReZygisk not working."
   },
   {
-    "name": "SukiSU Ultra RMX3031",
-    "version": "4.1.1",
-    "date": "2026-03-08",
-    "size": "22MB",
-    "url": "https://archive.org/download/rmx3031-sukisu-ultra/SukiSU_Ultra_RMX3031.zip",
-    "changelog": "Working: Root via SukiSU Ultra, SuSFS v2.0.0, Zygisk Next, Tricky Store / Play Integrity, Droidspaces / Linux container, KPM modules. Not working: ReZygisk (version check blocks non-submodule KSU), LSPosed (incompatible with Android 16 QPR2 ART)."
-  },
-  {
     "name": "Kernel RMX3031 Charging Fix (No Root)",
     "version": "",
     "date": "2026-03-08",
     "size": "21MB",
     "url": "https://archive.org/download/rmx3031-kernel-lineage-chargingfix/Lineage_23.2_ChargingFix_RMX3031.zip",
     "changelog": "Charging fix kernel for RMX3031. Added UDFPS support"
+  },
+  {
+    "name": "SukiSU Ultra RMX3031",
+    "version": "4.1.1",
+    "date": "2026-03-08",
+    "size": "22MB",
+    "url": "https://archive.org/download/rmx3031-sukisu-ultra/SukiSU_Ultra_RMX3031.zip",
+    "changelog": "Working: Root via SukiSU Ultra, SuSFS v2.0.0, Zygisk Next, Tricky Store / Play Integrity, Droidspaces / Linux container, KPM modules. Not working: ReZygisk (version check blocks non-submodule KSU), LSPosed (incompatible with Android 16 QPR2 ART)."
   },
   {
     "name": "COS 16 Kernel (No Root) Unstable",
