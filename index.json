@@ -47,7 +47,7 @@
     "date": "2026-03-24",
     "size": "21MB",
     "url": "https://archive.org/download/rmx3031-kernel-realme_ui/Realme_UI_KSU_RMX3031.zip",
-    "changelog": "COS 16 kernel without root. KernelSU Next. Use Zygisk Next / NeoZygisk. LSPosed working. SuSFS v1.5.5. SELinux: Enforcing. Flash SUSFS-FOR-KERNELSU module (required for better stealth/root hiding). Added UDFPS support. Note: ReZygisk not working."
+    "changelog": "COS 16 kernel . KernelSU Next . LSPosed working . SuSFS v1.5.5. SELinux: Enforcing. Flash SUSFS-FOR-KERNELSU module (required for better stealth/root hiding). Added UDFPS support."
   },
   {
     "name": "COS 16 Kernel (No Root)",
@@ -63,7 +63,7 @@
     "date": "2026-03-15",
     "size": "21MB",
     "url": "https://archive.org/download/rmx3031-kernel-ksu-next/KSU_Next_Cupida_Denniz.zip",
-    "changelog": "KernelSU Next. Use Zygisk Next / NeoZygisk. LSPosed working. SuSFS v1.5.5. SELinux: Enforcing. Flash SUSFS-FOR-KERNELSU module (required for better stealth/root hiding). Added UDFPS support. Note: ReZygisk not working."
+    "changelog": "KernelSU Next. LSPosed working. SuSFS v1.5.5. SELinux: Enforcing. Flash SUSFS-FOR-KERNELSU module (required for better stealth/root hiding). Added UDFPS support."
   },
   {
     "name": "Kernel RMX3031 Charging Fix (No Root)",
