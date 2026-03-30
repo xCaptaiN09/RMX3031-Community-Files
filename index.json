@@ -4,6 +4,15 @@
   "maintainer": "xCaptaiN09",
   "roms": [
   {
+    "name": "Lunaris AOSP 3.8",
+    "version": "3.8",
+    "android": "16",
+    "date": "2026-03-30",
+    "size": "2.4GB",
+    "url": "https://archive.org/download/rmx3031-lunaris-aosp-3-8/Lunaris-AOSP-op6893-Community-3.8-GMS-2026032923.zip",
+    "changelog": "Initial release. Added Sony Dolby Atmos (OnePlus UI). Added Warp Charging Overlay. Disabled 6GHz hotspot (broken). Gapps | Userdebug build. SELinux: Enforcing. Signed with release keys. Known bug: Screen Off UDFPS. By Rakhshan."
+  },
+  {
     "name": "EvolutionX v11.6.1",
     "version": "11.6.1",
     "android": "16",
@@ -74,7 +83,7 @@
     "changelog": "Charging fix kernel for RMX3031. Added UDFPS support"
   },
   {
-    "name": "SukiSU Ultra RMX3031 (unstable)",
+    "name": "SukiSU Ultra RMX3031 (Unstable)",
     "version": "4.1.1",
     "date": "2026-03-08",
     "size": "22MB",
@@ -82,7 +91,7 @@
     "changelog": "Working: Root via SukiSU Ultra, SuSFS v2.0.0, Zygisk Next, Tricky Store / Play Integrity, Droidspaces / Linux container, KPM modules. Not working: ReZygisk (version check blocks non-submodule KSU), LSPosed (incompatible with Android 16 QPR2 ART)."
   },
   {
-    "name": "COS 16 Kernel (No Root) Unstable",
+    "name": "COS 16 Kernel (No Root)(Unstable)",
     "version": "",
     "date": "2026-03-08",
     "size": "20MB",
