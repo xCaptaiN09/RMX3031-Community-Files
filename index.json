@@ -287,6 +287,14 @@
     "size": "7.29GB",
     "url": "https://archive.org/download/rmx3031-ota-cn-f24/RMX3031-F24-Toolbox.zip",
     "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. RMX3031 Indian variant. Sequential upgrade path: A27 > C18 > C26 > F01 > F12 > F24 > F25 (no data wipe needed). Cross-version upgrades/downgrades require data format."
+  },
+  {
+    "name": "F25 Toolbox",
+    "version": "F25",
+    "date": "2026-03-30",
+    "size": "7.26GB",
+    "url": "https://archive.org/download/rmx3031-ota-cn-f25/RMX3031-F25-Toolbox.zip",
+    "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. RMX3031 Indian variant. Sequential upgrade path: A27 > C18 > C26 > F01 > F12 > F24 > F25 (no data wipe needed). Cross-version upgrades/downgrades require data format."
   }
   ],
   "ota_cnf": [],
