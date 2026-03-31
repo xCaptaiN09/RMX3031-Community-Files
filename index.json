@@ -313,7 +313,16 @@
     "changelog": "Rollback package. Enable Developer Mode → Settings > About Phone > Software Update > Local Installation → rename to ota_downgrade.zip and install."
   }
   ],
-  "ota_cnf": [],
+  "ota_cnf": [
+  {
+    "name": "A07 (Deep Compact) Toolbox",
+    "version": "A07",
+    "date": "2026-03-31",
+    "size": "3.56GB",
+    "url": "https://archive.org/download/rmx3350-flash-a07-deep/RMX3350-A07-Deep-Compact-Toolbox-pkg.zip",
+    "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. Deep Compact variant — smaller size. RMX3350 GT Neo Flash Edition."
+  }
+  ],
   "firmware": [
     {
     "name": "RUI4 F.12 Firmware Only",
