@@ -305,7 +305,7 @@
     "changelog": "Rollback package. Enable Developer Mode → Settings > About Phone > Software Update > Local Installation → rename to ota_downgrade.zip and install."
   },
   {
-    "name": "C25 Rollback",
+    "name": "C25 (Rollback)",
     "version": "C25",
     "date": "2026-03-30",
     "size": "5.47GB",
