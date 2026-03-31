@@ -345,6 +345,14 @@
     "size": "5.45GB",
     "url": "https://archive.org/download/rmx3350-flash-a16/RMX3350-A16-Toolbox.zip",
     "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. RMX3350 GT Neo Flash Edition."
+  },
+  {
+    "name": "C15 Toolbox",
+    "version": "C15",
+    "date": "2026-03-31",
+    "size": "6.07GB",
+    "url": "https://archive.org/download/rmx3350-flash-c15/RMX3350-C15-Toolbox.zip",
+    "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. RMX3350 GT Neo Flash Edition. Sequential upgrade path: A22 > C12 > F13 > F24 (no data wipe needed). Cross-version upgrades/downgrades require data format."
   }
   ],
   "firmware": [
