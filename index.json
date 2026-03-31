@@ -353,6 +353,14 @@
     "size": "6.07GB",
     "url": "https://archive.org/download/rmx3350-flash-c15/RMX3350-C15-Toolbox.zip",
     "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. RMX3350 GT Neo Flash Edition. Sequential upgrade path: A22 > C12 > F13 > F24 (no data wipe needed). Cross-version upgrades/downgrades require data format."
+  },
+  {
+    "name": "C20 Toolbox",
+    "version": "C20",
+    "date": "2026-03-31",
+    "size": "6.29GB",
+    "url": "https://archive.org/download/rmx3350-flash-c20/RMX3350-C20-Toolbox.zip",
+    "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. RMX3350 GT Neo Flash Edition. Sequential upgrade path: A22 > C12 > F13 > F24 (no data wipe needed). Cross-version upgrades/downgrades require data format."
   }
   ],
   "firmware": [
