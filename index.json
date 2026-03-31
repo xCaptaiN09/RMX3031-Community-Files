@@ -321,6 +321,14 @@
     "size": "3.56GB",
     "url": "https://archive.org/download/rmx3350-flash-a07-deep/RMX3350-A07-Deep-Compact-Toolbox-pkg.zip",
     "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. Deep Compact variant — smaller size. RMX3350 GT Neo Flash Edition."
+  },
+  {
+    "name": "A07 Toolbox",
+    "version": "A07",
+    "date": "2026-03-31",
+    "size": "5.31GB",
+    "url": "https://archive.org/download/rmx3350-flash-a07/RMX3350-A07-Toolbox.zip",
+    "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. RMX3350 GT Neo Flash Edition."
   }
   ],
   "firmware": [
