@@ -129,6 +129,14 @@
       "size": "35MB",
       "url": "https://archive.org/download/rmx3031-kernels/v4.19.325-ksun-v12602-susfs-v1.5.5.zip",
       "changelog": "Linux 4.19.325 with KernelSU Next and SuSFS v1.5.5 and Nethunter"
+    },
+    {
+      "name": "ReSukiSU Cupida Denniz (AOSP)",
+      "version": "4.1.0",
+      "date": "2026-04-18",
+      "size": "19MB",
+      "url": "https://archive.org/download/rmx3031-kernels/RESUKISU-CUPIDA-DENNIZ.zip",
+      "changelog": "SuSFS v2.1.0. For AOSP ROMs."
     }
   ],
   "modules": [
@@ -228,7 +236,7 @@
       "date": "2026-03-11",
       "size": "3.60GB",
       "url": "https://archive.org/download/rmx3031-rollback-a21/X7MAX_11_A.21.zip",
-      "changelog": "Rollback package. Enable Developer Mode â Settings > About Phone > Software Update > Local Installation â select and install."
+      "changelog": "Rollback package. Enable Developer Mode Ã¢ÂÂ Settings > About Phone > Software Update > Local Installation Ã¢ÂÂ select and install."
     },
     {
       "name": "X7-MAX C16 (Rollback)",
@@ -236,7 +244,7 @@
       "date": "2026-03-11",
       "size": "5.02GB",
       "url": "https://archive.org/download/rmx3031-rollback-c16/X7MAX_11_C.16.zip",
-      "changelog": "Rollback package. Enable Developer Mode â Settings > About Phone > Software Update > Local Installation â select and install."
+      "changelog": "Rollback package. Enable Developer Mode Ã¢ÂÂ Settings > About Phone > Software Update > Local Installation Ã¢ÂÂ select and install."
     }
   ],
   "ota_cn": [
@@ -310,7 +318,7 @@
       "date": "2026-03-30",
       "size": "4.59GB",
       "url": "https://archive.org/download/rmx3031-rollback-cn-a29/RMX3031_11_A.29.zip",
-      "changelog": "Rollback package. Enable Developer Mode â Settings > About Phone > Software Update > Local Installation â rename to ota_downgrade.zip and install."
+      "changelog": "Rollback package. Enable Developer Mode Ã¢ÂÂ Settings > About Phone > Software Update > Local Installation Ã¢ÂÂ rename to ota_downgrade.zip and install."
     },
     {
       "name": "C25 (Rollback)",
@@ -318,7 +326,7 @@
       "date": "2026-03-30",
       "size": "5.47GB",
       "url": "https://archive.org/download/rmx3031-rollback-cn-c25/RMX3031_11_C.25.zip",
-      "changelog": "Rollback package. Enable Developer Mode â Settings > About Phone > Software Update > Local Installation â rename to ota_downgrade.zip and install."
+      "changelog": "Rollback package. Enable Developer Mode Ã¢ÂÂ Settings > About Phone > Software Update > Local Installation Ã¢ÂÂ rename to ota_downgrade.zip and install."
     }
   ],
   "ota_cnf": [
@@ -328,7 +336,7 @@
       "date": "2026-03-31",
       "size": "3.56GB",
       "url": "https://archive.org/download/rmx3350-flash-a07-deep/RMX3350-A07-Deep-Compact-Toolbox-pkg.zip",
-      "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. Deep Compact variant â smaller size. RMX3350 GT Neo Flash Edition."
+      "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. Deep Compact variant Ã¢ÂÂ smaller size. RMX3350 GT Neo Flash Edition."
     },
     {
       "name": "A07 Toolbox",
@@ -344,7 +352,7 @@
       "date": "2026-03-31",
       "size": "4.34GB",
       "url": "https://archive.org/download/rmx3350-flash-a16-compact/RMX3350-A16-Compact-Toolbox-pkg.zip",
-      "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. Compact variant â smaller size. RMX3350 GT Neo Flash Edition."
+      "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. Compact variant Ã¢ÂÂ smaller size. RMX3350 GT Neo Flash Edition."
     },
     {
       "name": "A16 Toolbox",
