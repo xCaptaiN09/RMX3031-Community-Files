@@ -4,6 +4,15 @@
   "maintainer": "xCaptaiN09",
   "roms": [
     {
+      "name": "LineageOS 23.2 Unofficial II",
+      "version": "23.2",
+      "android": "16",
+      "date": "2026-04-10",
+      "size": "1.4GB",
+      "url": "https://archive.org/download/rmx3031-lineageos-23-2-apr/lineage-23.2-20260410-UNOFFICIAL-gms-op6893.zip",
+      "changelog": "April Security Patch. Switched to Pixel Thermal Service. Added Screen Off UDFPS support. Fixed Fast Charging & Disconnecting issue. Blobs updated from latest OnePlus Nord 2 stock ROM (vendor security patch: July 2025). Signed build. Misc improvements. By ManshuTyagi."
+    },
+    {
       "name": "Lunaris AOSP 3.8",
       "version": "3.8",
       "android": "16",
