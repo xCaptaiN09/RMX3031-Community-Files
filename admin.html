@@ -396,15 +396,32 @@
   if (saved) { document.getElementById('ghToken').value = saved; setStatus(true); loadAll(); }
 
   // ── Token ──
-  function saveToken() {
+  async function saveToken() {
     const t = document.getElementById('ghToken').value.trim();
     if (!t) return showToast('Enter a token', 'error');
-    localStorage.setItem('gh_token', t);
-    setStatus(true); showToast('Token saved', 'success'); loadAll();
+    showToast('Verifying token...', 'loading');
+    try {
+      const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/index.json?ref=${BRANCH}`, {
+        headers: { 'Authorization': `Bearer ${t}`, 'Accept': 'application/vnd.github+json' }
+      });
+      if (!res.ok) {
+        setStatus(false);
+        localStorage.removeItem('gh_token');
+        showToast('Invalid token — access denied', 'error');
+        return;
+      }
+      localStorage.setItem('gh_token', t);
+      setStatus(true);
+      showToast('Token verified and saved', 'success');
+      loadAll();
+    } catch(e) {
+      setStatus(false);
+      showToast('Network error — could not verify token', 'error');
+    }
   }
   function setStatus(ok) {
     document.getElementById('statusDot').className = 'dot ' + (ok ? 'green' : 'red');
-    document.getElementById('statusText').textContent = ok ? 'Connected' : 'Not configured';
+    document.getElementById('statusText').textContent = ok ? 'Connected' : 'Disconnected';
     document.getElementById('tokenCard').className = 'token-card' + (ok ? ' connected' : '');
   }
   function getToken() { return localStorage.getItem('gh_token'); }
@@ -422,7 +439,15 @@
   async function fetchIndexJson() {
     try {
       const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/index.json?ref=${BRANCH}`, { headers: apiHeaders() });
-      if (!res.ok) throw new Error('Auth failed — check token');
+      if (!res.ok) {
+        if (res.status === 401 || res.status === 403) {
+          setStatus(false);
+          localStorage.removeItem('gh_token');
+          throw new Error('Token expired or revoked — re-enter token');
+        }
+        throw new Error('Failed to load index.json');
+      }
+      setStatus(true);
       const file = await res.json();
       indexJsonSha = file.sha;
       indexData = JSON.parse(atob(file.content.replace(/\n/g, '')));
