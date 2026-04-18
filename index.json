@@ -51,6 +51,14 @@
   ],
   "kernels": [
     {
+      "name": "ReSukiSU Cupida Denniz (AOSP)",
+      "version": "4.1.0",
+      "date": "2026-04-18",
+      "size": "19MB",
+      "url": "https://archive.org/download/rmx3031-kernels/RESUKISU-CUPIDA-DENNIZ.zip",
+      "changelog": "SuSFS v2.1.0. For AOSP ROMs."
+    },
+    {
       "name": "ReSukiSU Cupida Denniz (COS16/OOS16)",
       "version": "4.1.0",
       "date": "2026-04-18",
@@ -129,14 +137,6 @@
       "size": "35MB",
       "url": "https://archive.org/download/rmx3031-kernels/v4.19.325-ksun-v12602-susfs-v1.5.5.zip",
       "changelog": "Linux 4.19.325 with KernelSU Next and SuSFS v1.5.5 and Nethunter"
-    },
-    {
-      "name": "ReSukiSU Cupida Denniz (AOSP)",
-      "version": "4.1.0",
-      "date": "2026-04-18",
-      "size": "19MB",
-      "url": "https://archive.org/download/rmx3031-kernels/RESUKISU-CUPIDA-DENNIZ.zip",
-      "changelog": "SuSFS v2.1.0. For AOSP ROMs."
     }
   ],
   "modules": [
