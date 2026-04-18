@@ -56,6 +56,15 @@
       "size": "3.6GB",
       "url": "https://archive.org/download/rmx3031-risingos-8-1-1/RisingOS_Revived-8.1.1-251005-1609-GAPPS-COMMUNITY-MT6893-ota.zip",
       "changelog": "RisingOS Revived 8.1.1 unofficial build for RMX3031. Android 16."
+    },
+    {
+      "name": "Axion AOSP 2.5",
+      "version": "2.5",
+      "date": "2026-04-17",
+      "size": "3.5GB",
+      "url": "https://archive.org/download/rmx3031-axion-aosp-2-5/axion-2.5-REVERIE-20260417-UNOFFICIAL-GMS-op6893.zip",
+      "changelog": "Added Oplus Camera. Non-rooted build. Shipped with Revanced Apps. Clean flash mandatory. By zatvio.",
+      "android": "16"
     }
   ],
   "kernels": [
@@ -245,7 +254,7 @@
       "date": "2026-03-11",
       "size": "3.60GB",
       "url": "https://archive.org/download/rmx3031-rollback-a21/X7MAX_11_A.21.zip",
-      "changelog": "Rollback package. Enable Developer Mode Ã¢ÂÂ Settings > About Phone > Software Update > Local Installation Ã¢ÂÂ select and install."
+      "changelog": "Rollback package. Enable Developer Mode ÃÂ¢ÃÂÃÂ Settings > About Phone > Software Update > Local Installation ÃÂ¢ÃÂÃÂ select and install."
     },
     {
       "name": "X7-MAX C16 (Rollback)",
@@ -253,7 +262,7 @@
       "date": "2026-03-11",
       "size": "5.02GB",
       "url": "https://archive.org/download/rmx3031-rollback-c16/X7MAX_11_C.16.zip",
-      "changelog": "Rollback package. Enable Developer Mode Ã¢ÂÂ Settings > About Phone > Software Update > Local Installation Ã¢ÂÂ select and install."
+      "changelog": "Rollback package. Enable Developer Mode ÃÂ¢ÃÂÃÂ Settings > About Phone > Software Update > Local Installation ÃÂ¢ÃÂÃÂ select and install."
     }
   ],
   "ota_cn": [
@@ -327,7 +336,7 @@
       "date": "2026-03-30",
       "size": "4.59GB",
       "url": "https://archive.org/download/rmx3031-rollback-cn-a29/RMX3031_11_A.29.zip",
-      "changelog": "Rollback package. Enable Developer Mode Ã¢ÂÂ Settings > About Phone > Software Update > Local Installation Ã¢ÂÂ rename to ota_downgrade.zip and install."
+      "changelog": "Rollback package. Enable Developer Mode ÃÂ¢ÃÂÃÂ Settings > About Phone > Software Update > Local Installation ÃÂ¢ÃÂÃÂ rename to ota_downgrade.zip and install."
     },
     {
       "name": "C25 (Rollback)",
@@ -335,7 +344,7 @@
       "date": "2026-03-30",
       "size": "5.47GB",
       "url": "https://archive.org/download/rmx3031-rollback-cn-c25/RMX3031_11_C.25.zip",
-      "changelog": "Rollback package. Enable Developer Mode Ã¢ÂÂ Settings > About Phone > Software Update > Local Installation Ã¢ÂÂ rename to ota_downgrade.zip and install."
+      "changelog": "Rollback package. Enable Developer Mode ÃÂ¢ÃÂÃÂ Settings > About Phone > Software Update > Local Installation ÃÂ¢ÃÂÃÂ rename to ota_downgrade.zip and install."
     }
   ],
   "ota_cnf": [
@@ -345,7 +354,7 @@
       "date": "2026-03-31",
       "size": "3.56GB",
       "url": "https://archive.org/download/rmx3350-flash-a07-deep/RMX3350-A07-Deep-Compact-Toolbox-pkg.zip",
-      "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. Deep Compact variant Ã¢ÂÂ smaller size. RMX3350 GT Neo Flash Edition."
+      "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. Deep Compact variant ÃÂ¢ÃÂÃÂ smaller size. RMX3350 GT Neo Flash Edition."
     },
     {
       "name": "A07 Toolbox",
@@ -361,7 +370,7 @@
       "date": "2026-03-31",
       "size": "4.34GB",
       "url": "https://archive.org/download/rmx3350-flash-a16-compact/RMX3350-A16-Compact-Toolbox-pkg.zip",
-      "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. Compact variant Ã¢ÂÂ smaller size. RMX3350 GT Neo Flash Edition."
+      "changelog": "Three-in-one package includes TWRP, Fastboot and SP Flash Tool. Compact variant ÃÂ¢ÃÂÃÂ smaller size. RMX3350 GT Neo Flash Edition."
     },
     {
       "name": "A16 Toolbox",
