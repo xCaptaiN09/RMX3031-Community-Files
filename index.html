@@ -498,7 +498,7 @@
 
   function renderAll() {
     ['roms', 'kernels', 'modules', 'ota', 'ota_cn', 'ota_cnf', 'firmware', 'sptool', 'recovery', 'other'].forEach(cat => {
-      const items = data[cat] || [];
+      const items = (data[cat] || []).slice().sort((a, b) => new Date(b.date) - new Date(a.date));
       document.getElementById(`count-${cat}`).textContent = items.length;
       const el = document.getElementById(`tab-${cat}`);
       if (items.length === 0) {
