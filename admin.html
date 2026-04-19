@@ -192,6 +192,52 @@
   .toast.error { border-color: #ef444440; color: var(--red); }
   .toast.loading { border-color: #ff6b3540; color: var(--accent); }
 
+
+  /* Entry list */
+  .entry-list { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; }
+  .entry-item {
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 8px; padding: 10px 14px; gap: 10px;
+  }
+  .entry-info { flex: 1; min-width: 0; }
+  .entry-name { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .entry-meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); margin-top: 2px; }
+  .entry-actions { display: flex; gap: 6px; flex-shrink: 0; }
+  .btn-icon {
+    width: 30px; height: 30px; border: 1px solid var(--border); border-radius: 6px;
+    background: transparent; color: var(--muted); cursor: pointer; font-size: 14px;
+    display: flex; align-items: center; justify-content: center; transition: all 0.2s;
+  }
+  .btn-icon:hover { border-color: var(--accent); color: var(--accent); }
+  .btn-icon.del:hover { border-color: var(--red); color: var(--red); }
+
+  /* Duplicate warning */
+  .dup-warning {
+    background: #ff990015; border: 1px solid #ff990035; border-radius: 8px;
+    padding: 10px 14px; font-size: 12px; color: #fbbf24;
+    font-family: 'JetBrains Mono', monospace; margin-top: 6px; display: none;
+    line-height: 1.5;
+  }
+  .dup-warning.visible { display: block; }
+
+  /* Edit modal */
+  .modal-edit { max-width: 560px; }
+  .modal-edit .form-grid { grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+  .modal-edit .form-group.full { grid-column: 1/-1; }
+  .modal-edit input, .modal-edit textarea, .modal-edit select { font-size: 13px; padding: 8px 10px; }
+  .modal-edit textarea { min-height: 60px; }
+  .modal-title-edit { color: var(--blue); }
+
+  /* Entries panel nav */
+  .sub-nav { display: flex; gap: 6px; margin-bottom: 14px; }
+  .sub-nav-btn {
+    padding: 6px 14px; border: 1px solid var(--border); border-radius: 6px;
+    background: transparent; color: var(--muted); font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; cursor: pointer; transition: all 0.2s;
+  }
+  .sub-nav-btn.active { background: #ff6b3518; border-color: var(--accent); color: var(--accent); }
+
   @media (max-width: 560px) {
     .form-grid { grid-template-columns: 1fr; }
     .form-group.full { grid-column: 1; }
@@ -224,6 +270,7 @@
   <div class="nav-tabs">
     <button class="nav-tab active" onclick="switchPanel('add', this)">Add Entry</button>
     <button class="nav-tab" onclick="switchPanel('tabs', this)">Manage Tabs</button>
+    <button class="nav-tab" onclick="switchPanel('entries', this)">Browse Entries</button>
   </div>
 
   <!-- Panel: Add Entry -->
@@ -289,6 +336,7 @@
               <input type="text" id="manualUrl" placeholder="https://archive.org/download/item-id/filename.zip" oninput="onManualUrlInput()" />
               <div class="hint" id="manualUrlHint" style="margin-top:6px;"></div>
             </div>
+            <div class="dup-warning" id="dupWarning"></div>
 
           </div>
         </div>
@@ -362,6 +410,16 @@
   </div>
 </div>
 
+
+  <!-- Panel: Browse Entries -->
+  <div class="panel" id="panel-entries">
+    <div class="card">
+      <div class="card-title">Browse & Edit Entries</div>
+      <div class="sub-nav" id="entryTabNav"></div>
+      <div id="entryList"><div class="loading-row"><span class="spinner"></span> Loading...</div></div>
+    </div>
+  </div>
+
 <!-- Delete Modal -->
 <div class="modal-overlay" id="deleteModal">
   <div class="modal">
@@ -373,6 +431,61 @@
     <div class="modal-btn-row">
       <button class="btn btn-secondary" onclick="closeDeleteModal()">Cancel</button>
       <button class="btn btn-danger" id="confirmDeleteBtn" onclick="deleteTab()" disabled>Delete</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Edit Entry Modal -->
+<div class="modal-overlay" id="editModal">
+  <div class="modal modal-edit">
+    <div class="modal-title modal-title-edit">Edit Entry</div>
+    <div class="modal-desc" id="editModalDesc">Editing entry in tab</div>
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" id="editName" />
+      </div>
+      <div class="form-group">
+        <label>Version</label>
+        <input type="text" id="editVersion" />
+      </div>
+      <div class="form-group">
+        <label>Size</label>
+        <input type="text" id="editSize" />
+      </div>
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" id="editDate" />
+      </div>
+      <div class="form-group">
+        <label>Android</label>
+        <input type="text" id="editAndroid" placeholder="Leave blank if not ROM" />
+      </div>
+      <div class="form-group full">
+        <label>URL</label>
+        <input type="text" id="editUrl" />
+      </div>
+      <div class="form-group full">
+        <label>Changelog</label>
+        <textarea id="editChangelog"></textarea>
+      </div>
+    </div>
+    <div class="modal-btn-row">
+      <button class="btn btn-secondary" onclick="closeEditModal()">Cancel</button>
+      <button class="btn btn-blue" id="saveEditBtn" onclick="saveEdit()">Save Changes</button>
+    </div>
+  </div>
+</div>
+
+<!-- Delete Entry Modal -->
+<div class="modal-overlay" id="deleteEntryModal">
+  <div class="modal">
+    <div class="modal-title">Delete Entry</div>
+    <div class="modal-desc" id="deleteEntryDesc"></div>
+    <div class="modal-btn-row">
+      <button class="btn btn-secondary" onclick="closeDeleteEntryModal()">Cancel</button>
+      <button class="btn btn-danger" onclick="confirmDeleteEntry()">Delete</button>
     </div>
   </div>
 </div>
@@ -434,6 +547,7 @@
     await fetchIndexJson();
     populateTabDropdown();
     renderTabList();
+    if (document.getElementById('panel-entries').classList.contains('active')) renderEntriesPanel();
   }
 
   async function fetchIndexJson() {
@@ -521,7 +635,25 @@
     document.getElementById('urlPreview').textContent = id && fn
       ? `https://archive.org/download/${id}/${fn}`
       : 'Fill Item ID and Filename above...';
+    checkDuplicateUrl(getUrl());
     updatePreview();
+  }
+
+  function checkDuplicateUrl(url) {
+    const warn = document.getElementById('dupWarning');
+    if (!warn || !url || !indexData) { if(warn) warn.classList.remove('visible'); return; }
+    let found = null;
+    for (const [tabKey, entries] of Object.entries(indexData)) {
+      if (!Array.isArray(entries)) continue;
+      const match = entries.find(e => e.url === url);
+      if (match) { found = { tab: tabKey, name: match.name }; break; }
+    }
+    if (found) {
+      warn.textContent = `⚠️ This URL already exists in "${DEFAULT_NAMES[found.tab] || found.tab}" as "${found.name}"`;
+      warn.classList.add('visible');
+    } else {
+      warn.classList.remove('visible');
+    }
   }
 
   function onManualUrlInput() {
@@ -541,6 +673,7 @@
     } else {
       hint.textContent = '';
     }
+    checkDuplicateUrl(getUrl());
     updatePreview();
   }
 
@@ -638,6 +771,7 @@
     document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
     document.getElementById('panel-' + name).classList.add('active');
     btn.classList.add('active');
+    if (name === 'entries') renderEntriesPanel();
   }
 
   function updateTabKeyHint() {
@@ -780,9 +914,145 @@
     if (type !== 'loading') toastTimer = setTimeout(() => t.className = 'toast', 3500);
   }
 
+
+  // ── Browse Entries ──
+  let editingTab = null, editingIndex = null;
+  let deleteEntryTab = null, deleteEntryIndex = null;
+  let currentEntryTab = null;
+
+  function renderEntriesPanel() {
+    if (!indexData) return;
+    const tabs = Object.keys(indexData).filter(k => Array.isArray(indexData[k]));
+    const nav = document.getElementById('entryTabNav');
+    if (!currentEntryTab || !indexData[currentEntryTab]) currentEntryTab = tabs[0];
+
+    nav.innerHTML = tabs.map(key => `
+      <button class="sub-nav-btn ${key === currentEntryTab ? 'active' : ''}" onclick="setEntryTab('${key}')">
+        ${DEFAULT_NAMES[key] || key} (${indexData[key].length})
+      </button>
+    `).join('');
+
+    renderEntryList();
+  }
+
+  function setEntryTab(key) {
+    currentEntryTab = key;
+    renderEntriesPanel();
+  }
+
+  function renderEntryList() {
+    const el = document.getElementById('entryList');
+    if (!currentEntryTab || !indexData[currentEntryTab]) { el.innerHTML = '<div class="loading-row">No tab selected</div>'; return; }
+    const entries = indexData[currentEntryTab];
+    if (!entries.length) { el.innerHTML = '<div style="color:var(--muted);font-size:13px;padding:12px 0;">No entries in this tab.</div>'; return; }
+
+    const sorted = entries.map((e, i) => ({...e, _orig: i})).sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    el.innerHTML = '<div class="entry-list">' + sorted.map(e => `
+      <div class="entry-item">
+        <div class="entry-info">
+          <div class="entry-name">${e.name || '—'}</div>
+          <div class="entry-meta">${e.version ? 'v' + e.version + ' · ' : ''}${e.date || ''} ${e.size ? '· ' + e.size : ''}</div>
+        </div>
+        <div class="entry-actions">
+          <button class="btn-icon" title="Edit" onclick="openEditModal('${currentEntryTab}', ${e._orig})">✏️</button>
+          <button class="btn-icon del" title="Delete" onclick="openDeleteEntryModal('${currentEntryTab}', ${e._orig}, '${(e.name||'').replace(/'/g,"\'")}')">🗑️</button>
+        </div>
+      </div>
+    `).join('') + '</div>';
+  }
+
+  // ── Edit Entry ──
+  function openEditModal(tab, index) {
+    const e = indexData[tab][index];
+    if (!e) return;
+    editingTab = tab; editingIndex = index;
+    document.getElementById('editModalDesc').textContent = `Editing in "${DEFAULT_NAMES[tab] || tab}"`;
+    document.getElementById('editName').value = e.name || '';
+    document.getElementById('editVersion').value = e.version || '';
+    document.getElementById('editSize').value = e.size || '';
+    document.getElementById('editDate').value = e.date || '';
+    document.getElementById('editAndroid').value = e.android || '';
+    document.getElementById('editUrl').value = e.url || '';
+    document.getElementById('editChangelog').value = e.changelog || '';
+    document.getElementById('editModal').classList.add('visible');
+  }
+
+  function closeEditModal() {
+    document.getElementById('editModal').classList.remove('visible');
+    editingTab = null; editingIndex = null;
+  }
+
+  async function saveEdit() {
+    if (editingTab === null || editingIndex === null) return;
+    const btn = document.getElementById('saveEditBtn');
+    btn.disabled = true;
+    showToast('Saving changes...', 'loading');
+
+    try {
+      await fetchIndexJson();
+      const entry = indexData[editingTab][editingIndex];
+      entry.name = document.getElementById('editName').value.trim();
+      entry.version = document.getElementById('editVersion').value.trim() || undefined;
+      entry.size = document.getElementById('editSize').value.trim() || undefined;
+      entry.date = document.getElementById('editDate').value;
+      const android = document.getElementById('editAndroid').value.trim();
+      if (android) entry.android = android; else delete entry.android;
+      entry.url = document.getElementById('editUrl').value.trim();
+      entry.changelog = document.getElementById('editChangelog').value.trim();
+      // Clean undefined
+      Object.keys(entry).forEach(k => entry[k] === undefined && delete entry[k]);
+
+      await commitJson(indexData, `Edit ${entry.name} in ${editingTab}`);
+      showToast(`✓ Entry updated`, 'success');
+      closeEditModal();
+      populateTabDropdown();
+      renderTabList();
+      renderEntriesPanel();
+    } catch(e) { showToast(e.message, 'error'); }
+    finally { btn.disabled = false; }
+  }
+
+  // ── Delete Entry ──
+  function openDeleteEntryModal(tab, index, name) {
+    deleteEntryTab = tab; deleteEntryIndex = index;
+    document.getElementById('deleteEntryDesc').textContent = `Delete "${name}" from "${DEFAULT_NAMES[tab] || tab}"? This cannot be undone.`;
+    document.getElementById('deleteEntryModal').classList.add('visible');
+  }
+
+  function closeDeleteEntryModal() {
+    document.getElementById('deleteEntryModal').classList.remove('visible');
+    deleteEntryTab = null; deleteEntryIndex = null;
+  }
+
+  async function confirmDeleteEntry() {
+    if (deleteEntryTab === null || deleteEntryIndex === null) return;
+    showToast('Deleting entry...', 'loading');
+    try {
+      await fetchIndexJson();
+      const name = indexData[deleteEntryTab][deleteEntryIndex]?.name || 'entry';
+      indexData[deleteEntryTab].splice(deleteEntryIndex, 1);
+      await commitJson(indexData, `Delete ${name} from ${deleteEntryTab}`);
+      showToast(`✓ Entry deleted`, 'success');
+      closeDeleteEntryModal();
+      populateTabDropdown();
+      renderTabList();
+      renderEntriesPanel();
+    } catch(e) { showToast(e.message, 'error'); }
+  }
+
+  // Patch switchPanel to trigger entries render
+  const _origSwitchPanel = switchPanel;
+
   // Close modal on overlay click
   document.getElementById('deleteModal').addEventListener('click', function(e) {
     if (e.target === this) closeDeleteModal();
+  });
+  document.getElementById('editModal').addEventListener('click', function(e) {
+    if (e.target === this) closeEditModal();
+  });
+  document.getElementById('deleteEntryModal').addEventListener('click', function(e) {
+    if (e.target === this) closeDeleteEntryModal();
   });
 </script>
 </body>
